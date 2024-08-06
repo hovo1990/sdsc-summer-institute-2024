@@ -1,0 +1,8 @@
+= How to fetch from upstream
+
+[source,bash]
+----
+git remote add upstream git@github.com:sdsc/sdsc-summer-institute-2024.git
+git fetch upstream   
+git merge upstream/main
+----
