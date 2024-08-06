@@ -6,3 +6,15 @@ git remote add upstream git@github.com:sdsc/sdsc-summer-institute-2024.git
 git fetch upstream   
 git merge upstream/main
 ----
+
+= Notes
+
+
+1. HPC best practices
+    a. preempt interesting choice if job not running when can continue 
+    b. sacctmgr show qos 
+2. Data transfer
+    a.md5sum -c cifar-10-python.tar.gz.md5 check alwasys md5sum, sha256sum etc
+    b. sha256sum -c cifar-10-python.sha256
+    c. create checksum files to maintain integrity over time, maybe in nextflow pipeline
+    
