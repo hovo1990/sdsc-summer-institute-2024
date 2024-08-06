@@ -48,5 +48,6 @@ alias zgrep='zgrep --color=auto'
     b. sha256sum -c cifar-10-python.sha256
     c. create checksum files to maintain integrity over time, maybe in nextflow pipeline
     d. df -Th | grep -e "hgrab"
-
+3. Security
+    a. sshut down, same private key and public key on all machines, then problems and chaos 
 
