@@ -17,4 +17,4 @@ git merge upstream/main
     a.md5sum -c cifar-10-python.tar.gz.md5 check alwasys md5sum, sha256sum etc
     b. sha256sum -c cifar-10-python.sha256
     c. create checksum files to maintain integrity over time, maybe in nextflow pipeline
-    
+    d. df -Th | grep -e "hgrab"
