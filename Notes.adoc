@@ -7,6 +7,36 @@ git fetch upstream
 git merge upstream/main
 ----
 
+
+= Aliases
+
+[source,bash]
+----
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
+alias jupyter-compute-keras-nlp='galyleo launch --account gue998 --reservation si24 --partition compute --qos normal-eot --cpus 128 --memory 243 --time-limit 01:30:00 --conda-env keras-nlp --conda-yml keras-nlp.yaml --mamba --quiet'
+alias jupyter-compute-tensorflow='galyleo launch --account gue998 --reservation si24 --partition compute --qos normal-eot --cpus 128 --memory 243 --time-limit 04:00:00 --env-modules singularitypro --sif /cm/shared/apps/containers/singularity/tensorflow/tensorflow-latest.sif --bind /cm,/expanse,/scratch --quiet'
+alias jupyter-gpu-shared-llm='galyleo launch --account gue998 --reservation si24gpu --partition gpu-shared --qos gpu-shared-eot --cpus 4 --memory 32 --gpus 1 --time-limit 01:00:00 --env-modules singularitypro --sif /cm/shared/examples/sdsc/si/2024/LLM/ollama_late.sif --nv --bind /expanse,/scratch,/cm --quiet'
+alias jupyter-gpu-shared-pytorch='galyleo launch --account gue998 --reservation si24gpu --partition gpu-shared --qos gpu-shared-eot --cpus 10 --memory 92 --gpus 1 --time-limit 04:00:00 --env-modules singularitypro --sif /cm/shared/apps/containers/singularity/pytorch/pytorch-latest.sif --bind /cm,/expanse,/scratch --nv --quiet'
+alias jupyter-gpu-shared-tensorflow='galyleo launch --account gue998 --reservation si24gpu --partition gpu-shared --qos gpu-shared-eot --cpus 10 --memory 92 --gpus 1 --time-limit 04:00:00 --env-modules singularitypro --sif /cm/shared/apps/containers/singularity/tensorflow/tensorflow-latest.sif --bind /cm,/expanse,/scratch --nv --quiet'
+alias jupyter-shared-spark='galyleo launch --account gue998 --reservation si24 --partition shared --cpus 4 --memory 16 --time-limit 04:00:00 --env-modules singularitypro --sif /cm/shared/apps/containers/singularity/spark/spark-latest.sif --bind /cm,/expanse,/scratch --quiet'
+alias l.='ls -d .* --color=auto'
+alias ll='ls -l --color=auto'
+alias ls='ls --color=auto'
+alias mc='. /usr/libexec/mc/mc-wrapper.sh'
+alias srun-compute='srun --account=gue998 --reservation=si24 --partition=compute --qos=normal-eot --nodes=1 --ntasks-per-node=1 --cpus-per-task=128 --mem=243G --time=04:00:00 --pty --wait=0 /bin/bash'
+alias srun-gpu-shared='srun --account=gue998 --reservation=si24gpu --partition=gpu-shared --qos=gpu-shared-eot --nodes=1 --ntasks-per-node=1 --cpus-per-task=10 --mem=92G --gpus=1 --time=04:00:00 --pty --wait=0 /bin/bash'
+alias srun-shared='srun --account=gue998 --reservation=si24 --partition=shared --nodes=1 --ntasks-per-node=1 --cpus-per-task=4 --mem=16G --time=04:00:00 --pty --wait=0 /bin/bash'
+alias vi='vim'
+alias xzegrep='xzegrep --color=auto'
+alias xzfgrep='xzfgrep --color=auto'
+alias xzgrep='xzgrep --color=auto'
+alias zegrep='zegrep --color=auto'
+alias zfgrep='zfgrep --color=auto'
+alias zgrep='zgrep --color=auto'
+----
+
 = Notes
 
 
@@ -18,3 +48,5 @@ git merge upstream/main
     b. sha256sum -c cifar-10-python.sha256
     c. create checksum files to maintain integrity over time, maybe in nextflow pipeline
     d. df -Th | grep -e "hgrab"
+
+
