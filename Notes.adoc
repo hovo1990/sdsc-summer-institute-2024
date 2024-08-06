@@ -50,4 +50,9 @@ alias zgrep='zgrep --color=auto'
     d. df -Th | grep -e "hgrab"
 3. Security
     a. sshut down, same private key and public key on all machines, then problems and chaos 
+    b. reduce danger, 
+        protect with private key with a long passphrace
+        minimize the number of copies and provaes keys
+        fido2 keys
+        don't add public keys colleague data
 
