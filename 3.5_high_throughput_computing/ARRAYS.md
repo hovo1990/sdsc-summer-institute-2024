@@ -50,7 +50,7 @@ pi.py
 Next, download the example batch job script.
 
 ```
-wget https://raw.githubusercontent.com/sdsc/sdsc-summer-institute-2023/main/3.5_high_throughput_computing/estimate-pi.sh
+wget https://raw.githubusercontent.com/sdsc/sdsc-summer-institute-2024/main/3.5_high_throughput_computing/estimate-pi.sh
 ```
 
 Inspect the job script.
@@ -60,8 +60,9 @@ Inspect the job script.
 #!/usr/bin/env bash
 
 #SBATCH --job-name=estimate-pi
-#SBATCH --account=sds184
-#SBATCH --partition=debug
+#SBATCH --account=gue998
+#SBATCH --reservation=si24
+#SBATCH --partition=shared
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=1
