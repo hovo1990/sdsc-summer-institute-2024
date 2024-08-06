@@ -51,7 +51,7 @@ python3 "${HOME}/4pi/python/pi.py" 100000000
 ... then download the following batch job script to your HOME directory. It will combine the results from each individual estimate of Pi from the batch job array into a summary of statistics.
 
 ```
-wget https://raw.githubusercontent.com/sdsc/sdsc-summer-institute-2023/main/3.5_high_throughput_computing/compute-pi-stats.sh
+wget https://raw.githubusercontent.com/sdsc/sdsc-summer-institute-2024/main/3.5_high_throughput_computing/compute-pi-stats.sh
 ```
 
 ```
@@ -59,8 +59,8 @@ wget https://raw.githubusercontent.com/sdsc/sdsc-summer-institute-2023/main/3.5_
 #!/usr/bin/env bash
 
 #SBATCH --job-name=compute-pi-stats
-#SBATCH --account=crl155
-#SBATCH --reservation=SI2022DAY2
+#SBATCH --account=gue998
+#SBATCH --reservation=si24
 #SBATCH --partition=shared
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
@@ -72,8 +72,8 @@ wget https://raw.githubusercontent.com/sdsc/sdsc-summer-institute-2023/main/3.5_
 declare -xir ARRAY_JOB_ID="${1}"
 
 module reset
-module load gcc
-module load gnuplot
+module load gcc/10.2.0
+module load gnuplot/5.4.2
 
 echo "$(cat estimate-pi.o${ARRAY_JOB_ID}.*)" | \
   gnuplot -e 'stats "-"; print STATS_mean, STATS_stddev'
@@ -210,7 +210,7 @@ Resetting modules to system default. Reseting $MODULEPATH back to system default
 Finally, download the following batch job script. It recreates the simple workflow we ran above manually in a single batch job. Workflow jobs like this can be used to write (and launch) more complex job dependencies than you might do so directly from the command-line.
 
 ```
-wget https://raw.githubusercontent.com/sdsc/sdsc-summer-institute-2022/main/3.5_high_throughput_computing/run-pi-workflow.sh
+wget https://raw.githubusercontent.com/sdsc/sdsc-summer-institute-2024/main/3.5_high_throughput_computing/run-pi-workflow.sh
 ```
 
 Once you've downloaded the script, go ahead and launch the workflow. 

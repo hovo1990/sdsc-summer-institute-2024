@@ -2,7 +2,7 @@
 
 #SBATCH --job-name=compute-pi-stats
 #SBATCH --account=gue998
-#SBATCH --reservation=hpcds23cpu
+#SBATCH --reservation=si24
 #SBATCH --partition=shared
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
@@ -11,7 +11,7 @@
 #SBATCH --time=00:30:00
 #SBATCH --output=%x.o%j.%N
 
-declare -xir DEPENDENT_SLURM_ARRAY_JOB_ID="$(echo ${SLURM_JOB_DEPENDENCY} | grep -o '[[:digit:]]*')"
+declare -xir ARRAY_JOB_ID="${1}"
 
 module reset
 module load gcc/10.2.0
