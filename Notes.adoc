@@ -57,5 +57,9 @@ alias zgrep='zgrep --color=auto'
         don't add public keys colleague data
     c. think dangerously
     d. what if it happens?
-    e. 
+    e. multi factor authnetication
+    f. ci-provided tools for comonts tasks
+    g. fido2 hardware rescue, phishing resistant, works with ssh
+
+
 
