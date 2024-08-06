@@ -55,4 +55,7 @@ alias zgrep='zgrep --color=auto'
         minimize the number of copies and provaes keys
         fido2 keys
         don't add public keys colleague data
+    c. think dangerously
+    d. what if it happens?
+    e. 
 
