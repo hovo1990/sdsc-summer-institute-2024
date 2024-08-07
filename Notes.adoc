@@ -69,3 +69,7 @@ alias zgrep='zgrep --color=auto'
     1. 
 2. DASK HPC
     1. using ethernet not infiiniband
+    2. great explanation https://stackoverflow.com/questions/43881157/how-do-i-use-an-infiniband-network-with-dask 
+
+    3. dask-scheduler --interface ib0 --scheduler-file ~/my.cluster.yaml
+    dask-worker --interface ib0 --scheudler-file ~/my.cluster.yaml
