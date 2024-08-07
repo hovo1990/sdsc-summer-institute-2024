@@ -4,7 +4,7 @@
 #SBATCH --partition=compute
 #SBATCH --reservation=si24
 #SBATCH --account=gue998
-#SBATCH --nodes=2
+#SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --export=ALL
 #SBATCH --mem=240G

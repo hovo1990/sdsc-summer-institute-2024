@@ -67,3 +67,5 @@ alias zgrep='zgrep --color=auto'
 
 1. Advanced GIT
     1. 
+2. DASK HPC
+    1. using ethernet not infiiniband
