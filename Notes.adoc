@@ -90,3 +90,6 @@ alias zgrep='zgrep --color=auto'
 2. scontrol show reservation show reservation on HPC cluster 
 3. Compiling codes with optimization flags O1, O2, O3 etc
 4. [etrain94@exp-2-29 Matrix_addition]$ bash cmds_2dadd_amd
+5. loop level optimizations essential
+6. bash cmds_fusion_amd
+7. bash cmds_fusion_intel
