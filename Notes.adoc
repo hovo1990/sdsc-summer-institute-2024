@@ -87,3 +87,4 @@ alias zgrep='zgrep --color=auto'
  
 1. Load 
     bash cmds_gprof
+2. scontrol show reservation show reservation on HPC cluster 
