@@ -79,3 +79,11 @@ alias zgrep='zgrep --color=auto'
 3. Unreal engine
     1. Cesium, Unreal, Paraview, python
     2. 
+
+
+= Day 4
+
+== Performance tuning
+ 
+1. Load 
+    bash cmds_gprof
