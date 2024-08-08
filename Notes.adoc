@@ -93,3 +93,9 @@ alias zgrep='zgrep --color=auto'
 5. loop level optimizations essential
 6. bash cmds_fusion_amd
 7. bash cmds_fusion_intel
+
+
+
+= GPU programming
+still waiting for GPU nodes after 5 hours 
+1. 
