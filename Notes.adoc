@@ -88,3 +88,4 @@ alias zgrep='zgrep --color=auto'
 1. Load 
     bash cmds_gprof
 2. scontrol show reservation show reservation on HPC cluster 
+3. Compiling codes with optimization flags O1, O2, O3 etc
