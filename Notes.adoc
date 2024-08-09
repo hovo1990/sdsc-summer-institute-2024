@@ -104,3 +104,7 @@ still waiting for GPU nodes after 5 hours
 = MPI
 
 1. Mvapich on the cutting edge, conda pulls openmpi and intel mpi in between
+
+
+
+2. srun --mpi=pmi2 -n4 ./bcast.exe
